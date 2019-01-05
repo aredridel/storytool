@@ -19,6 +19,17 @@ exports.handler = argv => {
 	const { promisify } = require('util')
 	const writeFile = promisify(require('fs').writeFile)
 	run(async function main() {
+		// Create new as mid
+		// For after:
+			// Parse chapter as prev
+			// If there is a Next in prev, parse it as after
+		// For before:
+			// Parse chapter as after
+			// IF there is a Prev in after, parse it as prev
+		// Add link to prev from mid as Prev
+		// Add link to after from mid as Next
+		// Add link to mid from prev as Next
+		// Add link to mid from after as Prev
 		console.log(argv)
 		const id = getId()
 		const filename = `Chapter ${id}.md`

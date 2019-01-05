@@ -3,6 +3,7 @@
   "version": "1.1.0",
   "description": "Tools for fiction writers",
   "main": "index.js",
+  "bin": "index.js",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/aredridel/storytool.git"

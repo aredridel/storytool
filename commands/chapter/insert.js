@@ -1,6 +1,6 @@
 const crypto = require('crypto')
 
-exports.command = 'insert-chapter <pos> <chapter>'
+exports.command = 'insert <pos> <chapter>'
 
 exports.desc = 'Insert a chapter before or after another and link it'
 
@@ -32,7 +32,7 @@ exports.handler = argv => {
 		// Add link to mid from after as Prev
 		console.log(argv)
 		const id = getId()
-		const filename = `Chapter ${id}.md`
+		const filename = `Chapter-${id}.md`
 		console.log(filename)
 	})
 }

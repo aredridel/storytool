@@ -1,6 +1,6 @@
 const crypto = require('crypto')
 
-exports.command = 'create-chapter'
+exports.command = 'create'
 exports.desc = 'Create a new chapter'
 exports.builder = {}
 exports.handler = argv => {

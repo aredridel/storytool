@@ -1,16 +1,16 @@
 const crypto = require('crypto')
 
-exports.command = 'insert <pos> <chapter>'
+exports.command = 'insert <pos> <scene>'
 
-exports.desc = 'Insert a chapter before or after another and link it'
+exports.desc = 'Insert a scene before or after another and link it'
 
 exports.builder = yargs => {
 	yargs.positional('pos', {
-		describe: 'Where to put the new chapter',
+		describe: 'Where to put the new scene',
 		choices: ['before', 'after']
 
-	}).positional('chapter', {
-		describe: 'Chapter to precede or follow'
+	}).positional('scene', {
+		describe: 'Scene to precede or follow'
 	})
 }
 
@@ -21,10 +21,10 @@ exports.handler = argv => {
 	run(async function main() {
 		// Create new as mid
 		// For after:
-			// Parse chapter as prev
+			// Parse scene as prev
 			// If there is a Next in prev, parse it as after
 		// For before:
-			// Parse chapter as after
+			// Parse scene as after
 			// IF there is a Prev in after, parse it as prev
 		// Add link to prev from mid as Prev
 		// Add link to after from mid as Next
@@ -32,7 +32,7 @@ exports.handler = argv => {
 		// Add link to mid from after as Prev
 		console.log(argv)
 		const id = getId()
-		const filename = `Chapter-${id}.md`
+		const filename = `Scene-${id}.md`
 		console.log(filename)
 	})
 }

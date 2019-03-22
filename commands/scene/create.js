@@ -10,7 +10,7 @@ exports.handler = argv => {
 	const { promisify } = require('util')
 	const writeFile = promisify(require('fs').writeFile)
 	run(async function main() {
-		const filename = `Chapter-${id()}.md`
+		const filename = `Scene-${id()}.md`
 		await writeFile(filename, '', { flag : 'wx'})
 		console.log(filename)
 	})

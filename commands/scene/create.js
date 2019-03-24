@@ -1,6 +1,6 @@
 const crypto = require('crypto')
 
-const { id } = require('../../storyweb')
+const { id } = require('storyweb')
 
 exports.command = 'create'
 exports.desc = 'Create a new chapter'

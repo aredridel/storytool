@@ -1,6 +1,6 @@
 {
   "name": "storytool",
-  "version": "3.2.0",
+  "version": "3.2.1",
   "description": "Tools for fiction writers",
   "main": "index.js",
   "bin": "index.js",
@@ -9,7 +9,7 @@
     "url": "git+https://github.com/aredridel/storytool.git"
   },
   "author": {
-    "name":"Aria Stewart",
+    "name": "Aria Stewart",
     "email": "aredridel@dinhe.net",
     "key": "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIK7yzHqGQyNvZauwT511nvIr1WAqqvjPaRydNNKG6qRy"
   },

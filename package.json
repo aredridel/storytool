@@ -17,6 +17,7 @@
   "homepage": "https://github.com/aredridel/storytool#readme",
   "dependencies": {
     "async-main": "^1.0.2",
+    "storymap": "^2.4.0",
     "storyweb": "^1.2.1",
     "yargs": "^15.0.2"
   },

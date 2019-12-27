@@ -1,4 +1,8 @@
-exports.command = "id <command>"
-exports.desc = "Generate IDs"
-exports.builder = yargs => yargs.commandDir('id')
-exports.handler = (argv) => {}
+import generateCmd from "./id/generate.js";
+
+export default {
+	command: "id <command>",
+	desc: "Generate IDs",
+	builder: yargs => yargs.command(generateCmd),
+	handler: (argv) => {}
+}

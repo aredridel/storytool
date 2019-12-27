@@ -1,8 +1,13 @@
 #!/usr/bin/env node
 
-const argv = require('yargs')
+import yargs from "yargs";
+import idCmd from "./commands/id.js";
+import sceneCmd from "./commands/scene.js";
+
+const argv = yargs
 	.usage('$0 <cmd> [args]')
-	.commandDir('commands')
+	.command(idCmd)
+	.command(sceneCmd)
 	.demandCommand()
 	.help()
 	.strict()

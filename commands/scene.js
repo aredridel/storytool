@@ -1,4 +1,8 @@
-exports.command = "scene <command>"
-exports.desc = "Manage scenes"
-exports.builder = yargs => yargs.commandDir('scene')
-exports.handler = (argv) => {}
+import createCmd from "./scene/create.js";
+
+export default {
+	command : "scene <command>",
+	desc : "Manage scenes",
+	builder : yargs => yargs.command(createCmd),
+	handler : (argv) => {}
+}

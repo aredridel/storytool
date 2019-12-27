@@ -1,6 +1,7 @@
 {
   "name": "storytool",
   "version": "3.2.2",
+  "type": "module",
   "description": "Tools for fiction writers",
   "main": "index.js",
   "bin": "index.js",
@@ -18,5 +19,14 @@
     "async-main": "^1.0.2",
     "storyweb": "^1.2.1",
     "yargs": "^15.0.2"
+  },
+  "eslintConfig": {
+    "parserOptions": {
+      "ecmaVersion": 2018,
+      "sourceType": "module"
+    }
+  },
+  "engines": {
+    "node": ">13.0.0"
   }
 }

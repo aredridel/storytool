@@ -1,17 +1,19 @@
-const crypto = require('crypto')
+import crypto from 'crypto';
+import { default as amain } from "async-main";
+import { promisify } from "util";
+import fs from "fs";
+import { default as storyweb } from "storyweb";
 
-const { id } = require('storyweb')
-
-exports.command = 'create'
-exports.desc = 'Create a new chapter'
-exports.builder = {}
-exports.handler = argv => {
-	const run = require('async-main').default
-	const { promisify } = require('util')
-	const writeFile = promisify(require('fs').writeFile)
-	run(async function main() {
-		const filename = `Scene-${id()}.md`
-		await writeFile(filename, '', { flag : 'wx'})
-		console.log(filename)
-	})
+export default {
+	command : 'create',
+	desc : 'Create a new chapter',
+	builder : {},
+	handler : argv => {
+		const writeFile = promisify(fs.writeFile)
+		amain.default(async function main() {
+			const filename = `Scene-${storyweb.id()}.md`
+			await writeFile(filename, '', { flag : 'wx'})
+			console.log(filename)
+		})
+	}
 }

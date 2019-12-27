@@ -1,10 +1,11 @@
-const crypto = require('crypto')
+import crypto from "crypto";
+import { default as storyweb } from "storyweb";
 
-const { id } = require('storyweb')
-
-exports.command = 'generate'
-exports.desc = 'Generate a new ID'
-exports.builder = {}
-exports.handler = argv => {
-	console.log(id())
-}
+export default {
+	command : 'generate',
+	desc : 'Generate a new ID',
+	builder : {},
+	handler : argv => {
+		console.log(storyweb.id())
+	}
+};

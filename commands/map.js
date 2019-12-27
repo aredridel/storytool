@@ -10,7 +10,6 @@ export default {
 			command: 'generate <files...>',
 			desc: "Generate Story Map",
 			handler: async argv => {
-				console.log(argv);
 				try {
 					const st = argv.files.map(x => url.pathToFileURL(x));
 					const map = new WikiMap();
